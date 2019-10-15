@@ -13,7 +13,7 @@ body {
 
 .hogwartsHouse {
     border: 2px solid purple;
-    width: 500px;
+    width: 415px;
     margin: auto;
 
 }
@@ -21,8 +21,8 @@ body {
 .sortingDiv{
     border: 1px solid blue;
     margin: auto;
-    width: 80px;
-    margin: auto;
+    width: 67px;
+    
 }
 
 #sort {
@@ -31,7 +31,7 @@ body {
 
 .results {
     border: 2px solid red;
-    height: 300px;
-    width: 250px;
+    height: 302px;
+    width: 252px;
     margin: auto;
 }

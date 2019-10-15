@@ -1,15 +1,14 @@
 //const baseURL = 'https://www.potterapi.com/v1/sortingHat';
 
-const showMe = document.querySelector('results');
+const showMe = document.querySelector('.results');
+//const sortingHat = document.querySelector('sort');
 
-
+//sortingHat.addEventListener('submit', sortHat);
 
 //showMe.addEventListener('sort', sortHat);
-
-
 //function sortHat(e) {
    //e.preventDefault();
-    //console.log(e);
+    
     //showMe.addEventListener('sort', sortHat);
     fetch('https://www.potterapi.com/v1/sortingHat')
     .then(result => {
@@ -17,7 +16,7 @@ const showMe = document.querySelector('results');
     })
     .then(json => {
         //console.log(json);
-        displayHouse(json);
+       displayHouse(json);
     })
     .catch(err => {
         console.log(err);
@@ -27,26 +26,32 @@ const showMe = document.querySelector('results');
 function displayHouse(data) {
     console.log(data);    
 
-    let house = document.createElement('results');
+    let house = document.createElement('img');
+    
+    let gryffindorPic = './assets/gryffindor.jpg';
+    let hufflepuffPic = './assets/hufflepuff.jpg';
+    let ravenclawPic =  './assets/ravenclaw.jpg';
+    let slytherinPic = './assets/slytherin.jpg';
 
-    let gryffindor = src='/assets/gryffindor.jpg';
-    let hufflepuff = src='/assets/hufflepuff.jpg';
-    let ravenclaw =  src='/assets/ravenclaw.jpg';
-    let slytherin = src='/assets/slytherin.jpg';
 
-    if (data = 'gryffindor') {
-        house.src = gryffindor;
-    } else if (data = 'hufflepuff') {
-        house.src = hufflepuff;
-    } else if (data = 'ravenclaw') {
-        house.src = ravenclaw;
-    } else if (data = 'slytherin') {
-        house.src = slytherin;
+    if (data == 'Gryffindor') {
+        house.src = gryffindorPic;
+        console.log('It\'s a lion');
+    } else if (data == 'Hufflepuff') {
+        house.src = hufflepuffPic;
+        console.log('Get that badger')
+    } else if (data == 'Ravenclaw') {
+        house.src = ravenclawPic;
+        console.log('Catch the raven')
+    } else if (data == 'Slytherin') {
+        house.src = slytherinPic;
+        console.log('Slithering snake')
     }
+    console.log(house);
+    house.style.height = '300px';
+    house.style.width = '250px';
 
-    house.src = document.body.wrapper.results;
-
-    showMe.appendChild(data);
+    
+    showMe.appendChild(house);   
 }
-displayHouse();
 
