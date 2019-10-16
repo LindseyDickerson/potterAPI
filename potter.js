@@ -5,25 +5,32 @@ const showMe = document.querySelector('.results');
 
 //sortingHat.addEventListener('submit', sortHat);
 
+
+
 //showMe.addEventListener('sort', sortHat);
-//function sortHat(e) {
-   //e.preventDefault();
+//function sortHat(click) {
+//    e.preventDefault();
     
     //showMe.addEventListener('sort', sortHat);
+
+    document.getElementById("sortingPic").addEventListener("click", function houseFetch() {
     fetch('https://www.potterapi.com/v1/sortingHat')
     .then(result => {
         return result.json();
     })
     .then(json => {
         //console.log(json);
+        [...showMe.children].forEach(removeResult => showMe.removeChild(removeResult))
        displayHouse(json);
     })
     .catch(err => {
         console.log(err);
     })
-//}
+})
 
+// document.getElementById("sortingPic").addEventListener("click", function displayHouse(data) {
 function displayHouse(data) {
+   
     console.log(data);    
 
     let house = document.createElement('img');
@@ -51,6 +58,9 @@ function displayHouse(data) {
     house.style.height = '300px';
     house.style.width = '250px';
 
+    // while (sortingPic.firstChild) {
+    //     house.removeChild(house.firstChild);
+    // }
     
     showMe.appendChild(house);   
 }
