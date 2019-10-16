@@ -10,15 +10,25 @@ body {
 }
 
 .wrapper {
-    border: 2px solid black;
+    /* border: 2px solid black; */
 
 }
 
 .hogwartsHouse {
-    border: 2px solid purple;
-    width: 415px;
+    /* border: 2px solid purple; */
+    width: 445px;
     margin: auto;
+    background: black;
+    background: radial-gradient(#A34A28, black);
+    box-shadow: 0 0 5px 5px black;
+    border-radius: 5px;
+}
 
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+    text-shadow: 2px 1px black;
+    color: #A34A28;
+    padding: 10px;
 }
 
 #instructions {
@@ -37,23 +47,25 @@ body {
 #text {
     /* border: 1px solid orangered; */
     font-family: 'Unkempt', cursive;
-    font: brown;
+    font: #A34A28;
     width: 250px;
     height: 60px;
-    text-shadow: 2px 1px gray;
+    text-shadow: 1px 1px black;
     z-index: 3;
     position: relative;
-    top: -395%;
-    left: -8%;
+    top: -355%;
+    /* left: -8%; */
+    margin: auto;
+    
     
 }
 
 h2 {
-    color: brown;
+    color: #A34A28;
 }
 
 .sortingDiv{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin: auto;
     width: 67px;
     
@@ -71,7 +83,7 @@ h2 {
     height: 250px;
     top: 10px;
     padding: 30px;
-    
+    border-radius: 5px;
     
 }
 
@@ -85,9 +97,10 @@ h2 {
 }
 
 .results {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 302px;
     width: 252px;
     margin: auto;
+    
 }
 
